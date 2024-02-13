@@ -1,9 +1,13 @@
 <Jumbo>
     <h2>{{@rental.title}}</h2>
-     <p>Nice find! This looks like a nice place to stay near {{@rental.city}}.</p>
-    <a href="#" target="_blank" rel="external nofollow noopener noreferrer" class="share button">
+    <p>Nice find! This looks like a nice place to stay near {{@rental.city}}.</p>
+    <ShareButton
+    @text="Check out {{@rental.title}} on Super Rentals!"
+    @hashtags="vacation,travel,authentic,blessed,superrentals"
+    @via="emberjs"
+    >
     Share on Twitter
-    </a>
+    </ShareButton>
 </Jumbo>
 
 <article class="rental detailed">
@@ -31,3 +35,4 @@
       <p>{{@rental.description}}</p>
     </div>
   </div>
+</article>
